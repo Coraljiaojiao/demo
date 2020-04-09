@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+
+<title>login</title>
+<!--discription标签由我们前端人员编写，里面的内容由SEO人员提供-->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <form action="" class="login-form">
+        <h1>login</h1>
+        <div class="txtb">
+            <input type="text" class="txt">
+            <span data-placeholder="Username"></span>
+        </div>
+        <div class="txtb">
+            <input type="password" class="pwd">
+            <span data-placeholder="Password"></span>
+        </div>
+
+        <input type="submit" class="logbtn" value="Login">
+        <div class="bottom-text">
+            Don't have account? <a href="#">Sign up</a>
+        </div>
+    </form>
+    
+
+</body>
+<script src="jquery-1.12.0.min.js"></script>
+<script >
+    var txtb = document.querySelectorAll('.txtb');
+    console.log(typeof txtb);
+    var input = document.querySelectorAll('input');
+    console.log(input);
+    input[0].onfocus = function() {
+        this.className = 'focus';
+    }
+    input[0].onblur = function() {
+        if (this.value == '') {
+            this.className = '';
+        }
+    }
+    input[1].onfocus = function() {
+        this.className = 'focus';
+    }
+    input[1].onblur = function() {
+        if (this.value == '') {
+            this.className = '';
+        }
+    }
+    
+</script>
+
+</html>
